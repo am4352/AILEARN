@@ -15,6 +15,7 @@ const Login = () => {
             const result = await signInWithPopup(auth, googleProvider);
             setUser(result.user);
             console.log("Google user:", result.user);
+            navigate('/dashboard');
         } catch (error) {
             console.error("Google Sign-In Error:", error.message);
         }
@@ -23,7 +24,18 @@ const Login = () => {
     // Handle Phone Number Authentication
     const sendOTP = async () => {
         try {
+            // Make sure recaptcha is set up
+            if (!window.recaptchaVerifier) {
+                window.recaptchaVerifier = new RecaptchaVerifier(auth, "recaptcha-container", {
+                    size: "invisible",
+                    callback: (response) => {
+                        console.log("reCAPTCHA verified:", response);
+                    },
+                });
+            }
+
             const confirmation = await setUpRecaptcha(phone);
+            console.log("otp testing")
             setConfirmationResult(confirmation);
             alert("OTP sent!");
         } catch (error) {
