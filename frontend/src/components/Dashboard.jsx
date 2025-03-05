@@ -2,7 +2,6 @@ import React from 'react'
 import Navbar from './Navbar';
 
 const Dashboard = () => {
-    console.log(" dashboard testing");
   return (
     <div>
       <Navbar />
