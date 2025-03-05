@@ -1,15 +1,23 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./components/Login";
-import ProtectedRoute from "./components/ProtectedRoute";
 import Dashboard from "./components/Dashboard";
+import { useState , useEffect } from "react";
 
 function App() {
+  const [message, setMessage] = useState("");
+ 
+  useEffect(() => {
+    fetch("http://localhost:3000/")
+    .then((res) => res.json())
+    .then((data) => setMessage(data.message))
+    .catch((error) => { console.error("error fetching data", error) })
+   
+  }, []);
+  
   return (
     <Router>
-      <Routes>      
+      <div>{message }</div>
+      <Routes>           
         <Route path="/dashboard" element={<Dashboard />} />
-        
-
       </Routes>
     </Router>
   );

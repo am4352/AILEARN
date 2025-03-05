@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
       <nav className='bg-blue-600 text-white p-4'>
           <div className='flex justify-between items-center'>
-              <h1 className='text-2xl'>EDUTECH</h1>
+              <h1 className='text-2xl'>AiCADEMY</h1>
               <ul className='flex space-x-5'>
                   <li className='hover:bg-blue-700'>
                       Home
