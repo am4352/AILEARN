@@ -1,15 +1,18 @@
 import express from "express";
+const app = express();
+app.use(express.json());
 import cors from "cors";
+app.use(cors());
 import  configDotenv  from "dotenv";
 import connectDb from "./config/db.js"
 import openaiRoute from "./routes/openaiRoute.js";
 import path from "path"
 configDotenv.config();
 const PORT = 3000;
-const app = express();
+
 connectDb();
-app.use(cors());
-app.use(express.json());
+
+
 
 
 app.get("/", (req, res) => {

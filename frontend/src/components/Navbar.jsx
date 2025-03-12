@@ -16,7 +16,7 @@ const Navbar = () => {
                       Courses
                   </li>
                   <li>
-                      Contact
+                      Quiz
                   </li>
 
               </ul>

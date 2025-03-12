@@ -15,9 +15,9 @@ function App() {
   
   return (
     <Router>
-      <div>{message }</div>
+      {/* <div>{message }</div> */}
       <Routes>           
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/" element={<Dashboard />} />
       </Routes>
     </Router>
   );
