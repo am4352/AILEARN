@@ -1,5 +1,6 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route , Link} from "react-router-dom";
 import Dashboard from "./components/Dashboard";
+import Quiz from "./components/Quiz";
 import { useState , useEffect } from "react";
 
 function App() {
@@ -15,9 +16,10 @@ function App() {
   
   return (
     <Router>
-      <div>{message }</div>
+      {/* <div>{message }</div> */}
       <Routes>           
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/quiz" element={<Quiz />} />
       </Routes>
     </Router>
   );

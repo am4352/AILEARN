@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Quiz from './Quiz'
 
 const Navbar = () => {
+   
   return (
       <nav className='bg-blue-600 text-white p-4'>
           <div className='flex justify-between items-center'>
@@ -15,12 +18,13 @@ const Navbar = () => {
                   <li>
                       Courses
                   </li>
-                  <li>
-                      Contact
+                  <li >
+                      <Link to="/quiz">Quiz</Link>
                   </li>
+                
 
               </ul>
-
+              
 
           </div>
 
