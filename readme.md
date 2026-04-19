@@ -1,7 +1,7 @@
 # **EdTech Platform**
 
 An AI-powered EdTech platform that helps students solve academic questions using AI-generated responses.
-
+Used chatgpt
 ---
 
 ## 🚀 **Features**
