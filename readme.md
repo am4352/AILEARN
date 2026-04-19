@@ -29,4 +29,4 @@ An AI-powered EdTech platform that helps students solve academic questions using
 │   └── package.json
 ├── .gitignore
 ├── README.md
-└── .env
+└── .env1
